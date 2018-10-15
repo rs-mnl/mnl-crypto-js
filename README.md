@@ -1,12 +1,11 @@
-# Hybrid Crypto JS
+# MNL Crypto JS
 
-[![NPM](https://nodei.co/npm/hybrid-crypto-js.png?compact=true)](https://nodei.co/npm/hybrid-crypto-js/)
-
+[![NPM](https://nodei.co/npm/mnl-crypto-js.png?compact=true)](https://nodei.co/npm/mnl-crypto-js/)
 ## Introduction
 
 <a name="introduction"></a>
 
-*Hybrid Crypto JS* is a hybrid (RSA+AES) encryption and decryption toolkit for JavaScript, including automatic and persistent key management on React Native. *Hybrid Crypto JS* combines RSA and AES encryption algorithms making it possible to efficiently encrypt and decrypt large messages. This cross-platform library is based on [Forge](https://github.com/digitalbazaar/forge).
+*MNL Crypto JS* is a hybrid (RSA+AES) encryption and decryption toolkit for JavaScript, including automatic and persistent key management on React Native. *Hybrid Crypto JS* combines RSA and AES encryption algorithms making it possible to efficiently encrypt and decrypt large messages. This cross-platform library is based on [Forge](https://github.com/digitalbazaar/forge) and designed to work in tandem with python's [Cryptography](https://cryptography.io/).
 
 ## Documentation
 
@@ -31,29 +30,15 @@
 <a name="installation"></a>
 
 ```
-npm install hybrid-crypto-js
+npm install mnl-crypto-js
 ```
 
 ### Importing
 
-**Node.js**
-
-```js
-var RSA = require('hybrid-crypto-js').RSA;
-var Crypt = require('hybrid-crypto-js').Crypt;
-```
-
 **React Native**
 
 ```js
-import {Crypt, keyManager, RSA} from 'hybrid-crypto-js';
-```
-
-**Web**
-
-Download minified *hybrid-crypto.min.js* file [here](https://raw.githubusercontent.com/juhoen/hybrid-crypto-js/master/web/hybrid-crypto.min.js).
-```html
-<script type="text/javascript" src="hybrid-crypto.min.js"></script>
+import {Crypt, keyManager, RSA} from 'mnl-crypto-js';
 ```
 
 ## Features
@@ -95,7 +80,7 @@ var encrypted = crypt.encrypt(publicKey, message, signature);
 **Pretty-printed sample output**
 ```js
 {
-    "v": "hybrid-crypto-js_0.1.2",        // Current package version
+    "v": "mnl-crypto-js_0.1.2",        // Current package version
     "iv": "CmtyaZTyzoAp1mTNUTztic0v1...", // Initialization vector
     "keys": {                             // Encrypted AES keys by RSA fingerprints
         "85:3d:10:e1:56...": "bHaTF9...",
@@ -114,7 +99,7 @@ var encrypted = crypt.encrypt(publicKey, message, signature);
 Decrypting message with *Hybrid Crypto JS* is as easy as encrypting. Decryption function can decrypt any message which has been encrypted with keypair's public key. Decrypted message is outputted as a JSON object.
 
 ```js
-var encrypted = '{"v":"hybrid-crypto-js_0.1.0","iv":"CmtyaZTyzoAp1mTN...';
+var encrypted = '{"v":"mnl-crypto-js_0.1.0","iv":"CmtyaZTyzoAp1mTN...';
 
 // Decrypt encryped message with private RSA key
 var decrypted = crypt.decrypt(privateKey, encrypted);
@@ -206,7 +191,7 @@ var rsa = new RSA({
 Key manager works when using React Native. It automatically generates, saves and fetches device specific keypair from the device's storage.
 
 ```js
-import {keyManager} from 'hybrid-crypto-js';
+import {keyManager} from 'mnl-crypto-js';
 
 // Get device specific RSA key pair
 keyManager.getKeys(function(keypair) {

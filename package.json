@@ -1,6 +1,6 @@
 {
   "name": "mnl-crypto-js",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "RSA and AES encryption and decryption toolkit for React native",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juhoen/react-native-hybrid-crypto.git"
+    "url": "git+https://github.com/rs-mnl/mnl-crypto-js.git"
   },
   "keywords": [
     "rsa",
@@ -20,12 +20,12 @@
     "react",
     "native"
   ],
-  "author": "Juho Enala <juho.enala@gmail.com>",
+  "author": "Rolando Schneiderman <rolando@mynewleaf.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/juhoen/react-native-hybrid-crypto/issues"
+    "url": "https://github.com/rs-mnl/mnl-crypto-js/issues"
   },
-  "homepage": "https://github.com/juhoen/react-native-hybrid-crypto#readme",
+  "homepage": "https://github.com/rs-mnl/mnl-crypto-js",
   "peerDependencies": {
     "react-native": ">= 0.48.0"
   },
