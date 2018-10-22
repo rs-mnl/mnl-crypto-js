@@ -1,6 +1,6 @@
 {
   "name": "mnl-crypto-js",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "RSA and AES encryption and decryption toolkit for React native",
   "main": "lib/index.js",
   "scripts": {
