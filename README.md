@@ -5,7 +5,7 @@
 
 <a name="introduction"></a>
 
-*MNL Crypto JS* is a hybrid (RSA+AES) encryption and decryption toolkit for JavaScript, including automatic and persistent key management on React Native. *Hybrid Crypto JS* combines RSA and AES encryption algorithms making it possible to efficiently encrypt and decrypt large messages. This cross-platform library is based on [Forge](https://github.com/digitalbazaar/forge) and designed to work in tandem with python's [Cryptography](https://cryptography.io/).
+*MNL Crypto JS* is a hybrid (RSA+AES) encryption and decryption toolkit for JavaScript, including automatic and persistent key management on React Native. *MNL Crypto JS* combines RSA and AES encryption algorithms making it possible to efficiently encrypt and decrypt large messages. This cross-platform library is based on [Forge](https://github.com/digitalbazaar/forge) and designed to work in tandem with python's [Cryptography](https://cryptography.io/).
 
 ## Documentation
 
@@ -62,7 +62,7 @@ var rsa = new RSA({entropy: entropy});
 
 <a name="encryption"></a>
 
-*Hybrid Crypto JS* provides basic encryption function which supports also multiple RSA keys, with or without [signature](#signatures). Encrypted message is outputted as a JSON string.
+*MNL Crypto JS* provides basic encryption function which supports also multiple RSA keys, with or without [signature](#signatures). Encrypted message is outputted as a JSON string.
 
 ```js
 var message = 'Hello world!';
@@ -96,7 +96,7 @@ var encrypted = crypt.encrypt(publicKey, message, signature);
 
 <a name="decryption"></a>
 
-Decrypting message with *Hybrid Crypto JS* is as easy as encrypting. Decryption function can decrypt any message which has been encrypted with keypair's public key. Decrypted message is outputted as a JSON object.
+Decrypting message with *MNL Crypto JS* is as easy as encrypting. Decryption function can decrypt any message which has been encrypted with keypair's public key. Decrypted message is outputted as a JSON object.
 
 ```js
 var encrypted = '{"v":"mnl-crypto-js_0.1.0","iv":"CmtyaZTyzoAp1mTN...';
@@ -119,7 +119,7 @@ var message = decrypted.message;
 
 <a name="signatures"></a>
 
-*Hybrid Crypto JS* provides simple message signing. When issuer signs a message, message receiver can be sure of the message issuer.
+*MNL Crypto JS* provides simple message signing. When issuer signs a message, message receiver can be sure of the message issuer.
 
 ```js
 var message = 'Hello world!';
@@ -153,7 +153,7 @@ Verification function return *true* or *false* depending on whether the verifica
 
 <a name="rsa-keypairs"></a>
 
-*Hybrid Crypto JS* RSA key generation function is based in [Forge](https://github.com/digitalbazaar/forge#rsa) key pair generation function. As a difference *Hybrid Crypto JS* returns keypair in PEM format.
+*MNL Crypto JS* RSA key generation function is based in [Forge](https://github.com/digitalbazaar/forge#rsa) key pair generation function. As a difference *MNL Crypto JS* returns keypair in PEM format.
 
 ```js
 // Initialize RSA-class
